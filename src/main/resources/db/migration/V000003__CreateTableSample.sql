@@ -1,0 +1,1 @@
+INSERT INTO listings (category,city,state,country,info,address,contact_number,user_id) VALUES ('OXYGEN','DELHI','DELHI','INDIA','Oxygen Cylinder available','AKF Pharma Delhi-110007','9988776655,9988776622',1);

@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 import static com.democracy.sample.response.RespCodes.*;
 
 @Data
-@Component
 @AllArgsConstructor
 @NoArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
