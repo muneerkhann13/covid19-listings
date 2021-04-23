@@ -12,9 +12,9 @@
 		<version>2.1.1.RELEASE</version>
 	</parent>
 
-	<artifactId>sample</artifactId>
-	<groupId>com.democracy.sample</groupId>
-	<name>sample</name>
+	<artifactId>listings</artifactId>
+	<groupId>com.democracy.covid19</groupId>
+	<name>listings</name>
 	<version>master</version>
 	<packaging>jar</packaging>
 

@@ -11,14 +11,11 @@ import org.springframework.stereotype.Service;
 public class AddService {
 
 	@Autowired
-	AddConverter addConverter;
-
-	@Autowired
 	private SampleDataService sampleDataService;
 
 	public AddResponse add(AddRequest request) {
 
-		sampleDataService.add(addConverter.convert(request));
+		sampleDataService.add(AddConverter.convert(request));
 
 		return createSuccessResponse();
 	}
