@@ -13,12 +13,12 @@ import java.util.Date;
 @DynamicUpdate
 public class City {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String city;
+	private String city;
 
-    private String state;
+	private String state;
 
 }

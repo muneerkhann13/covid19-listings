@@ -6,5 +6,6 @@ import java.util.List;
 
 public interface CityDataService {
 
-    List<City> getAllCities();
+	List<City> getAllCities();
+
 }

@@ -11,21 +11,22 @@ import java.util.List;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
-    private final CategorySlaveRepository categorySlaveRepository;
 
-    public CategoryServiceImpl(CategorySlaveRepository categorySlaveRepository) {
-        this.categorySlaveRepository = categorySlaveRepository;
-    }
+	private final CategorySlaveRepository categorySlaveRepository;
 
-    private static List<Category> categoryList;
+	public CategoryServiceImpl(CategorySlaveRepository categorySlaveRepository) {
+		this.categorySlaveRepository = categorySlaveRepository;
+	}
 
+	private static List<Category> categoryList;
 
-    @Override
-    public List<Category> getAll() {
+	@Override
+	public List<Category> getAll() {
 
-        if(categoryList == null || categoryList.isEmpty()){
-            categoryList = categorySlaveRepository.findAll();
-        }
-        return categoryList;
-    }
+		if (categoryList == null || categoryList.isEmpty()) {
+			categoryList = categorySlaveRepository.findAll();
+		}
+		return categoryList;
+	}
+
 }

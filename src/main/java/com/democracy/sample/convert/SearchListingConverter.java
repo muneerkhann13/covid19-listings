@@ -12,7 +12,7 @@ public class SearchListingConverter {
 		List<com.democracy.sample.response.Listings> listingsList = response.stream()
 				.map(dbResponse -> com.democracy.sample.response.Listings.convert(dbResponse))
 				.collect(Collectors.toList());
-		SearchListingsResponse searchListingsResponse =  new SearchListingsResponse();
+		SearchListingsResponse searchListingsResponse = new SearchListingsResponse();
 		searchListingsResponse.setListings(listingsList);
 		return searchListingsResponse;
 	}

@@ -55,16 +55,15 @@ public class Controller {
 	}
 
 	@RequestMapping(value = { "/city" }, method = { RequestMethod.GET })
-	public @ResponseBody
-	List<City> getAllCities() {
+	public @ResponseBody List<City> getAllCities() {
 
 		return cityDataService.getAllCities();
 	}
 
 	@RequestMapping(value = { "/category" }, method = { RequestMethod.GET })
-	public @ResponseBody
-	List<Category> getAllCategory() {
+	public @ResponseBody List<Category> getAllCategory() {
 
 		return categoryService.getAll();
 	}
+
 }

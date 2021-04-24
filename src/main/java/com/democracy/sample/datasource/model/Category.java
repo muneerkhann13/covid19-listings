@@ -1,6 +1,5 @@
 package com.democracy.sample.datasource.model;
 
-
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
 import org.hibernate.annotations.DynamicUpdate;
@@ -16,10 +15,10 @@ import javax.persistence.Id;
 @DynamicUpdate
 public class Category {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    private String category;
+	private String category;
+
 }
-

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.http.converter.HttpMessageConversionException;
 
-@RestControllerAdvice(assignableTypes = { Controller.class, SearchListingsController.class})
+@RestControllerAdvice(assignableTypes = { Controller.class, SearchListingsController.class })
 @Slf4j
 public class Advice {
 

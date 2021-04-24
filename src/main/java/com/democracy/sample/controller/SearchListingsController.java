@@ -26,8 +26,8 @@ public class SearchListingsController {
 	public @ResponseBody SearchListingsResponse searchV1(@RequestBody SearchListingRequest request,
 			@RequestParam String tracer, @RequestParam Long requestTimestamp) {
 
-		SearchListingsResponse response =  searchListingsService.serach(request);
-		log.info("{}",response);
+		SearchListingsResponse response = searchListingsService.serach(request);
+		log.info("{}", response);
 		return response;
 	}
 
