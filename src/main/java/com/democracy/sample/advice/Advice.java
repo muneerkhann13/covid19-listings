@@ -1,6 +1,7 @@
 package com.democracy.sample.advice;
 
 import com.democracy.sample.controller.Controller;
+import com.democracy.sample.controller.SearchListingsController;
 import com.democracy.sample.exceptions.business.BusinessException;
 import com.democracy.sample.exceptions.technical.TechnicalException;
 import com.democracy.sample.response.BaseResponse;
@@ -11,8 +12,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.http.converter.HttpMessageConversionException;
 
-@RestControllerAdvice(assignableTypes = { Controller.class })
+@RestControllerAdvice(assignableTypes = { Controller.class, SearchListingsController.class})
 @Slf4j
 public class Advice {
 
@@ -22,6 +24,12 @@ public class Advice {
 	@ResponseStatus(HttpStatus.OK)
 	@ExceptionHandler(BusinessException.class)
 	public BaseResponse handleException(BusinessException exception) {
+		return responseBuilder.baseResponse(exception);
+	}
+
+	@ResponseStatus(HttpStatus.BAD_REQUEST)
+	@ExceptionHandler(HttpMessageConversionException.class)
+	public BaseResponse handleException(HttpMessageConversionException exception) {
 		return responseBuilder.baseResponse(exception);
 	}
 
