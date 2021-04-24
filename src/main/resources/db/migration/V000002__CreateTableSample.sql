@@ -24,13 +24,3 @@ CREATE TABLE `listings` (
   DEFAULT CHARSET = utf8mb4;
 
 
-  CREATE TABLE `city` (
-    `id`         BIGINT(20)   NOT NULL AUTO_INCREMENT,
-    `city`       VARCHAR(100)           DEFAULT NULL,
-    `state` VARCHAR(100)           NOT NULL,
-    `created_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `updated_on` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (`id`)
-  )
-    ENGINE = InnoDB
-    DEFAULT CHARSET = utf8mb4;

@@ -3,10 +3,13 @@ package com.democracy.sample.service.impl;
 import com.democracy.sample.datasource.model.City;
 import com.democracy.sample.datasource.repository.slave.CitySlaveRepository;
 import com.democracy.sample.service.CityDataService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CityDataServiceImpl implements CityDataService {
+
 
     private final CitySlaveRepository citySlaveRepository;
 
@@ -19,7 +22,7 @@ public class CityDataServiceImpl implements CityDataService {
     @Override
     public List<City> getAllCities() {
 
-        if(cityList.isEmpty()){
+        if(cityList == null || cityList.isEmpty()){
             cityList =  citySlaveRepository.findAll();
         }
         return cityList;

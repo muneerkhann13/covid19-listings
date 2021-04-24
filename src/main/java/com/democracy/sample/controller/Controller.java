@@ -1,10 +1,12 @@
 package com.democracy.sample.controller;
 
 import com.democracy.sample.constants.ApplicationConstants;
+import com.democracy.sample.datasource.model.Category;
 import com.democracy.sample.datasource.model.City;
 import com.democracy.sample.request.AddRequest;
 import com.democracy.sample.response.AddResponse;
 import com.democracy.sample.service.AddService;
+import com.democracy.sample.service.CategoryService;
 import com.democracy.sample.service.CityDataService;
 import com.democracy.sample.service.UpdateService;
 import com.democracy.sample.validator.AddValidator;
@@ -34,6 +36,9 @@ public class Controller {
 	@Autowired
 	private CityDataService cityDataService;
 
+	@Autowired
+	private CategoryService categoryService;
+
 	@RequestMapping(value = { "/" + APPLICATION_NAME + "/add" }, method = { RequestMethod.POST },
 			consumes = { "application/json" })
 	public @ResponseBody AddResponse add(@Validated @RequestBody AddRequest request, @RequestParam String tracer,
@@ -56,4 +61,10 @@ public class Controller {
 		return cityDataService.getAllCities();
 	}
 
+	@RequestMapping(value = { "/category" }, method = { RequestMethod.GET })
+	public @ResponseBody
+	List<Category> getAllCategory() {
+
+		return categoryService.getAll();
+	}
 }
